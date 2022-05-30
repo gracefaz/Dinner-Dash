@@ -1,14 +1,19 @@
 function Header() {
   return (
     <header className="App-header">
-      <div class="topnav">
+      <nav class="topnav">
         <a class="active" href="#home">
           Home
         </a>
+
         <a href="#login">Login </a>
+
         <a href="#signup">Sign Up </a>
+
         <a href="#about">About </a>
-      </div>
+
+        <a href="#search">Search</a>
+      </nav>
       <h1 id="dinnerdash">DINNER DASH</h1>
       <form className="postcodeForm">
         <input

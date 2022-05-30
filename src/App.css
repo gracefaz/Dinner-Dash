@@ -38,6 +38,7 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+  display: flex;
 }
 
 .topnav a {
@@ -91,6 +92,26 @@
   padding: 12px;
   border-radius: 20px;
   border: white;
+}
+
+#search {
+  margin-left: auto;
+}
+
+.menu-img {
+  width: 10em;
+  height: 10em;
+  object-fit: cover;
+}
+
+.menu-list {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+#list {
+  list-style: none;
 }
 
 @keyframes App-logo-spin {
