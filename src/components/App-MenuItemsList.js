@@ -31,10 +31,10 @@ function Menu() {
       orderCount: 0,
     },
     {
-      name: "Garlic Bread",
+      name: "Pepperoni Pizza",
       imageURL:
-        "https://www.simplyrecipes.com/thmb/_kfMeM8vmbWkGWn6Y0PDmHdfYu4=/2000x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2006__09__Garlic-Bread-LEAD-1-8b9944bb8e7a4fc49094da4d34f7ba50.jpg",
-      price: "£4.00",
+        "https://www.dogtownpizza.com/wp-content/uploads/2020/01/picking-slice-of-pepperoni-pizza-picture-id1133727757.jpg",
+      price: "£7.00",
       orderCount: 0,
     },
     {
@@ -59,12 +59,6 @@ function Menu() {
       orderCount: 0,
     },
   ];
-
-  //   const basket = {
-  //     "Famous Wings": 0,
-  //     "The New York Burger": 0,
-  //     "Dirty Fries": 0,
-  //   };
 
   //const [quantity, setQuantity] = useState(0);
   const [menuItems, setMenuItems] = useState(initialMenuItems);
