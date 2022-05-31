@@ -1,5 +1,7 @@
+import { useState } from "react";
+
 function Menu() {
-  const menuItems = [
+  const initialMenuItems = [
     {
       name: "Famous Wings",
       imageURL:
@@ -64,6 +66,23 @@ function Menu() {
   //     "Dirty Fries": 0,
   //   };
 
+  //const [quantity, setQuantity] = useState(0);
+  const [menuItems, setMenuItems] = useState(initialMenuItems);
+
+  // quantity = menuItems.orderCount;
+
+  const quantityInc = (menuItemName) => {
+    setMenuItems((currMenuItems) => {
+      let newArr = [...currMenuItems];
+      for (let i = 0; i < newArr.length; i++) {
+        if (newArr[i].name === menuItemName) {
+          newArr[i].orderCount += 1;
+        }
+      }
+      return newArr;
+    });
+  };
+
   return (
     <div className="row">
       <div className="menu-list">
@@ -71,11 +90,24 @@ function Menu() {
           {menuItems.map((menuItem) => {
             return (
               <div className="column">
-                <li key={menuItem.name}>
-                  <h3>{menuItem.name}</h3>
-                  <img className="menu-img" src={menuItem.imageURL}></img>
+                <li className="listItem" key={menuItem.name}>
+                  <h3 id="menuItemName">{menuItem.name}</h3>
+                  <img
+                    alt=""
+                    className="menu-img"
+                    src={menuItem.imageURL}
+                  ></img>
                   <h4>Price: {menuItem.price}</h4>
                   <h5 id="quantity">Qty: {menuItem.orderCount}</h5>
+                  <button
+                    onClick={() => {
+                      quantityInc(menuItem.name);
+                    }}
+                    type="submit"
+                    id="addButton"
+                  >
+                    Add
+                  </button>
                 </li>
               </div>
             );
