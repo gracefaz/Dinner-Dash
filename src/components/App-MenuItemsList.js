@@ -17,8 +17,29 @@ function Menu() {
     {
       name: "Dirty Fries",
       imageURL:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgSUNdPHxU2MwG1DrpR2lvYxlxKudyfyzYPg&usqp=CAU",
+        "https://www.lovebakesgoodcakes.com/wp-content/uploads/2014/08/Loaded-Bacon-Cheese-Fries-square.jpg",
       price: "£5.00",
+      orderCount: 0,
+    },
+    {
+      name: "Chicken Ceaser",
+      imageURL:
+        "https://reciperunner.com/wp-content/uploads/2017/07/Grilled-Chicken-Caesar-Salad-Photograph.jpg",
+      price: "£6.55",
+      orderCount: 0,
+    },
+    {
+      name: "Garlic Bread",
+      imageURL:
+        "https://www.simplyrecipes.com/thmb/_kfMeM8vmbWkGWn6Y0PDmHdfYu4=/2000x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2006__09__Garlic-Bread-LEAD-1-8b9944bb8e7a4fc49094da4d34f7ba50.jpg",
+      price: "£4.00",
+      orderCount: 0,
+    },
+    {
+      name: "Chicken Tenders",
+      imageURL:
+        "https://butternutmountainfarm.com/sites/default/files/styles/large/public/images/recipes/img_2197_1.jpg?itok=7aEzorlz",
+      price: "£4.50",
       orderCount: 0,
     },
     {
@@ -26,6 +47,13 @@ function Menu() {
       imageURL:
         "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/milkshake-b0d6105.jpg?quality=90&webp=true&resize=440,400",
       price: "£3.50",
+      orderCount: 0,
+    },
+    {
+      name: "Chocolate Sundae",
+      imageURL:
+        "https://images.aws.nestle.recipes/original/2020_06_03T13_22_21_mrs_ImageRecipes_147692lrg.jpg",
+      price: "£3.99",
       orderCount: 0,
     },
   ];
@@ -37,17 +65,23 @@ function Menu() {
   //   };
 
   return (
-    <div className="menu-list">
-      <ul id="list">
-        {menuItems.map((menuItem) => {
-          return (
-            <li key={menuItem.name}>
-              <h4>{menuItem.name}</h4>
-              <img className="menu-img" src={menuItem.imageURL}></img>
-            </li>
-          );
-        })}
-      </ul>
+    <div className="row">
+      <div className="menu-list">
+        <ul id="list">
+          {menuItems.map((menuItem) => {
+            return (
+              <div className="column">
+                <li key={menuItem.name}>
+                  <h3>{menuItem.name}</h3>
+                  <img className="menu-img" src={menuItem.imageURL}></img>
+                  <h4>Price: {menuItem.price}</h4>
+                  <h5 id="quantity">Qty: {menuItem.orderCount}</h5>
+                </li>
+              </div>
+            );
+          })}
+        </ul>
+      </div>
     </div>
   );
 }

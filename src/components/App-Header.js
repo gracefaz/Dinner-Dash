@@ -1,8 +1,8 @@
 function Header() {
   return (
     <header className="App-header">
-      <nav class="topnav">
-        <a class="active" href="#home">
+      <nav className="topnav">
+        <a className="active" href="#home">
           Home
         </a>
 
